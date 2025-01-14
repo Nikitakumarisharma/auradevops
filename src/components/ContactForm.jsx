@@ -1,6 +1,7 @@
 "use client"
 import { useState } from "react";
 
+// pages ke andar node js ka code lika hai backend ka . for contact submission.
 const ContactForm = () => {
   const [formData, setFormData] = useState({
     name: "",

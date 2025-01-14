@@ -1,11 +1,6 @@
 import type { Config } from "tailwindcss";
-
 const defaultTheme = require("tailwindcss/defaultTheme");
-const colors = require("tailwindcss/colors");
-const {
-  default: flattenColorPalette,
-} = require("tailwindcss/lib/util/flattenColorPalette");
-
+ 
 function addVariablesForColors({ addBase, theme }: any) {
   let allColors = flattenColorPalette(theme("colors"));
   let newVars = Object.fromEntries(
@@ -16,6 +11,11 @@ function addVariablesForColors({ addBase, theme }: any) {
     ":root": newVars,
   });
 }
+
+const colors = require("tailwindcss/colors");
+const {
+  default: flattenColorPalette,
+} = require("tailwindcss/lib/util/flattenColorPalette");
 
 export default {
   content: [
@@ -34,6 +34,7 @@ export default {
         scroll:
           "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
       },
+
       keyframes: {
         scroll: {
           to: {
@@ -44,4 +45,5 @@ export default {
     },
   },
   plugins: [addVariablesForColors],
+
 } satisfies Config;

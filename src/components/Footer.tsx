@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="flex justify-between items-center max-w-7xl mx-auto px-2">
           <div>
             <h2 className="text-2xl font-bold">Ready for a next project?</h2>
-            <p className="text-lg">Let's get started!</p>
+            <p className="text-lg">Let get started!</p>
           </div>
 
           <Link href="/Contact">
@@ -61,7 +61,8 @@ const Footer = () => {
               <li>
                 <a
                   href="mailto:xyz@gmail.com"
-                  className=" hover:underline"
+                  className="hover:underline"
+                  title="Send an email to xyz@gmail.com"
                 >
                   xyz@gmail.com
                 </a>
@@ -78,22 +79,22 @@ const Footer = () => {
               <a
                 href="#"
                 className="bg-gray-700 p-2 rounded-full hover:bg-purple-500"
-              >f
-                <i className="fab fa-facebook-f"></i>
+              >
+                f<i className="fab fa-facebook-f"></i>
               </a>
               <a
                 href="#"
                 className="bg-gray-700 p-2 rounded-full hover:bg-purple-500"
-              >L
-                <i className="fab fa-twitter"></i>
+              >
+                L<i className="fab fa-twitter"></i>
               </a>
               <a
                 href="#"
                 className="bg-gray-700 p-2 rounded-full hover:bg-purple-500"
-              > I
-                <i className="fab fa-linkedin-in"></i>
+              >
+                {" "}
+                I<i className="fab fa-linkedin-in"></i>
               </a>
-             
             </div>
           </div>
         </div>

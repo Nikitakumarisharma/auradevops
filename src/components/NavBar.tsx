@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import logo from "@/assets/weblogo.jpg";
 
 const Navbar = () => {
@@ -16,27 +17,27 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <a href="/" className="flex items-center">
+            <Link href="/" className="flex items-center">
               <Image
                 src={logo}
                 alt="Company Logo"
                 className="h-16 w-auto pr-0 "
               />
               <span className="text-orange-600 font-bold">Auradevops</span>
-            </a>
+            </Link>
           </div>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-6">
-            <a href="/" className="text-gray-700 hover:text-blue-500">
+            <Link href="/" className="text-gray-700 hover:text-blue-500">
               Home
-            </a>
-            <a href="/Services" className="text-gray-700 hover:text-blue-500">
+            </Link>
+            <Link href="/Services" className="text-gray-700 hover:text-blue-500">
               Services
-            </a>
-            <a href="/Contact" className="text-gray-700 hover:text-blue-500">
+            </Link>
+            <Link href="/Contact" className="text-gray-700 hover:text-blue-500">
               Contact
-            </a>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -57,7 +58,9 @@ const Navbar = () => {
                   strokeLinejoin="round"
                   strokeWidth="2"
                   d={
-                    isOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"
+                    isOpen
+                      ? "M6 18L18 6M6 6l12 12"
+                      : "M4 6h16M4 12h16M4 18h16"
                   }
                 />
               </svg>
@@ -68,19 +71,16 @@ const Navbar = () => {
         {/* Mobile Menu */}
         {isOpen && (
           <div className="md:hidden mb-2">
-            <div className="flex flex-col space-y-2 ">
-              <a href="/" className="text-gray-700 hover:text-blue-500">
+            <div className="flex flex-col space-y-2">
+              <Link href="/" className="text-gray-700 hover:text-blue-500">
                 Home
-              </a>
-              <a
-                href="/Services"
-                className="text-gray-700 hover:text-blue-500 "
-              >
+              </Link>
+              <Link href="/Services" className="text-gray-700 hover:text-blue-500">
                 Services
-              </a>
-              <a href="/Contact" className="text-gray-700 hover:text-blue-500">
+              </Link>
+              <Link href="/Contact" className="text-gray-700 hover:text-blue-500">
                 Contact
-              </a>
+              </Link>
             </div>
           </div>
         )}

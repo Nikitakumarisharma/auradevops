@@ -70,7 +70,7 @@ function CustomService() {
             </button>
           </Link>
         </div>
-        <hr className=" mt-7 " />
+
     </div>
   );
 }

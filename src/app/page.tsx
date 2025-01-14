@@ -1,9 +1,9 @@
 import HeroSection from "@/components/HeroSection";
-import Movingcards from "@/components/movingcards";
 import ServiceCard from "@/components/serivceCard"
 import CompanyIntro from "@/components/CompanyIntro"
 import OurProcess from "@/components/OurProcess";
 import CustomService from "@/components/Customized"
+import Feedback from "@/components/feedback"
 
 export default function Home() {
   return (
@@ -13,7 +13,7 @@ export default function Home() {
     <CompanyIntro />
     <OurProcess />
     <CustomService />
-    <Movingcards />
+    <Feedback />
     </main>
   );
 }
