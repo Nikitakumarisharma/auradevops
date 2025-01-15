@@ -4,6 +4,7 @@ import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
   return (
     <div className="bg-gray-900 text-gray-300">
       {/* Call-to-Action Section */}
@@ -103,9 +104,10 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      {/* all right reserved */}
       <div className="bg-white text-black text-center py-4 font-bold">
-        © All rights reserved
-      </div>
+      © {currentYear} AURADevops. All rights reserved.
+    </div>
     </div>
   );
 };
