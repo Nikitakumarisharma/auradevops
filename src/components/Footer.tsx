@@ -1,5 +1,7 @@
 import Link from "next/link";
 import React from "react";
+import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+
 
 const Footer = () => {
   return (
@@ -22,7 +24,7 @@ const Footer = () => {
 
       {/* Footer Links */}
       <div className="max-w-7xl mx-auto px-4 py-10">
-        <div className="grid lg:grid-cols-4 grid-cols-2 gap-6">
+        <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-6">
           {/* Company Info */}
           <div>
             <h3 className="text-lg font-semibold">AURA DevOps</h3>
@@ -60,15 +62,15 @@ const Footer = () => {
             <ul className="space-y-2 mt-2">
               <li>
                 <a
-                  href="mailto:xyz@gmail.com"
+                  href="info@auradevops.com"
                   className="hover:underline"
                   title="Send an email to xyz@gmail.com"
                 >
-                  xyz@gmail.com
+                  info@auradevops.com
                 </a>
               </li>
 
-              <li>98 xxxx xxxx</li>
+              <li>7586047606</li>
             </ul>
           </div>
 
@@ -76,26 +78,28 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold">Follow us</h3>
             <div className="flex space-x-3 mt-3">
-              <a
-                href="#"
-                className="bg-gray-700 p-2 rounded-full hover:bg-purple-500"
-              >
-                f<i className="fab fa-facebook-f"></i>
-              </a>
-              <a
-                href="#"
-                className="bg-gray-700 p-2 rounded-full hover:bg-purple-500"
-              >
-                L<i className="fab fa-twitter"></i>
-              </a>
-              <a
-                href="#"
-                className="bg-gray-700 p-2 rounded-full hover:bg-purple-500"
-              >
-                {" "}
-                I<i className="fab fa-linkedin-in"></i>
-              </a>
-            </div>
+      <a
+        href="#"
+        className="bg-gray-700 p-2 rounded-full hover:bg-purple-500 text-white"
+        aria-label="Facebook"
+      >
+        <FaFacebookF />
+      </a>
+      <a
+        href="#"
+        className="bg-gray-700 p-2 rounded-full hover:bg-purple-500 text-white"
+        aria-label="Instagram"
+      >
+        <FaInstagram />
+      </a>
+      <a
+        href="#"
+        className="bg-gray-700 p-2 rounded-full hover:bg-purple-500 text-white"
+        aria-label="LinkedIn"
+      >
+        <FaLinkedinIn />
+      </a>
+    </div>
           </div>
         </div>
       </div>
