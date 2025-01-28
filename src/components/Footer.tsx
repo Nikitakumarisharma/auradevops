@@ -61,17 +61,13 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold">Contact Us</h3>
             <ul className="space-y-2 mt-2">
-              <li>
-                <a
-                  href="info@auradevops.com"
-                  className="hover:underline"
-                  title="Send an email to xyz@gmail.com"
-                >
-                  info@auradevops.com
-                </a>
-              </li>
+            <li>
+  <a href="mailto:info@auradevops.com" title="Send an email to info@auradevops.com">
+    info@auradevops.com
+  </a>
+</li>
 
-              <li>7586047606</li>
+
             </ul>
           </div>
 
