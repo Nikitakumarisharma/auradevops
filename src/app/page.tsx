@@ -17,7 +17,7 @@ export default function Home() {
     <OurProcess />
     <NewsLetter />
     <Message />
-    <Feedback />
+    {/* <Feedback /> */}
     </main>
   );
 }
