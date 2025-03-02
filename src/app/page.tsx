@@ -4,7 +4,7 @@ import CompanyIntro from "@/components/CompanyIntro"
 import OurProcess from "@/components/OurProcess";
 import CustomService from "@/components/service"
 import NewsLetter from "@/components/newsletter"
-import Feedback from "@/components/feedback"
+// import Feedback from "@/components/feedback"
 import Message from "@/components/malik"
 
 export default function Home() {
