@@ -2,41 +2,6 @@
 import { useState } from "react";
 
 const ContactForm = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-
-  const [responseMessage, setResponseMessage] = useState("");
-
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    try {
-      const res = await fetch("/pages/api/contact.js", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-
-      if (!res.ok) {
-        throw new Error(`HTTP error! Status: ${res.status}`);
-      }
-
-      const data = await res.json();
-      setResponseMessage(data.message);
-    } catch (error) {
-      console.error("Error:", error);
-      setResponseMessage("Failed to send the message. Please try again.");
-    }
-  };
 
   return (
     <div className="max-w-md mx-auto p-4 bg-gray-200 rounded shadow my-24 text-blue-900">
