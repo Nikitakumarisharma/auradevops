@@ -1,7 +1,6 @@
-"use client"
+"use client";
 import { useState } from "react";
 
-// pages ke andar node js ka code lika hai backend ka . for contact submission.
 const ContactForm = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -17,16 +16,26 @@ const ContactForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const res = await fetch("/api/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    });
 
-    const data = await res.json();
-    setResponseMessage(data.message);
+    try {
+      const res = await fetch("/pages/api/contact.js", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!res.ok) {
+        throw new Error(`HTTP error! Status: ${res.status}`);
+      }
+
+      const data = await res.json();
+      setResponseMessage(data.message);
+    } catch (error) {
+      console.error("Error:", error);
+      setResponseMessage("Failed to send the message. Please try again.");
+    }
   };
 
   return (
@@ -34,9 +43,7 @@ const ContactForm = () => {
       <h2 className="text-xl font-bold mb-4">Contact Us</h2>
       <form onSubmit={handleSubmit}>
         <div className="mb-4">
-          <label htmlFor="name" className="block text-sm font-medium">
-            Name
-          </label>
+          <label htmlFor="name" className="block text-sm font-medium">Name</label>
           <input
             type="text"
             id="name"
@@ -48,9 +55,7 @@ const ContactForm = () => {
           />
         </div>
         <div className="mb-4">
-          <label htmlFor="email" className="block text-sm font-medium">
-            Email
-          </label>
+          <label htmlFor="email" className="block text-sm font-medium">Email</label>
           <input
             type="email"
             id="email"
@@ -62,9 +67,7 @@ const ContactForm = () => {
           />
         </div>
         <div className="mb-4">
-          <label htmlFor="message" className="block text-sm font-medium">
-            Message
-          </label>
+          <label htmlFor="message" className="block text-sm font-medium">Message</label>
           <textarea
             id="message"
             name="message"
@@ -74,16 +77,11 @@ const ContactForm = () => {
             required
           ></textarea>
         </div>
-        <button
-          type="submit"
-          className="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600"
-        >
+        <button type="submit" className="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600">
           Submit Your Request Now!
         </button>
       </form>
-      {responseMessage && (
-        <p className="mt-4 text-sm text-green-600">{responseMessage}</p>
-      )}
+      {responseMessage && <p className="mt-4 text-sm text-green-600">{responseMessage}</p>}
     </div>
   );
 };

@@ -2,7 +2,6 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import logo from "@/assets/weblogo.jpg";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,9 +18,11 @@ const Navbar = () => {
           <div className="flex items-center">
             <Link href="/" className="flex items-center">
               <Image
-                src={logo}
+                src= "/weblogo.jpg"
                 alt="Company Logo"
                 className="h-16 w-auto pr-0 "
+                width={256} // Specify the width of the image
+                height={64}
               />
               <span className="text-orange-600 font-bold">Auradevops</span>
             </Link>

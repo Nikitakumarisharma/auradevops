@@ -3,23 +3,21 @@ import React from "react";
 const services = [
   {
     title: "Customized App Development",
-    description: "Tailored solutions based on clients' specific requirements.",
+    description: "Customized app development creates tailored software solutions, enhancing user experience and meeting specific business needs  through innovative design and functionality.",
   },
   {
-    title: "Web Development Services",
+    title: "Aura Newsletter Publication",
     description:
-      "Providing top-notch software development solutions for businesses.",
+      "Aura Newsletter delivers insightful articles, updates, and resources, fostering community engagement and promoting well-being through curated content and expert contributions.",
   },
-  {
-    title: "Mobile App Development",
-    description:
-      "Developing user-friendly mobile applications with seamless functionality across platforms.",
-  },
+  
 ];
 
 const ServiceCard = () => {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 lg:px-16 px-8 bg-white lg:mt-24 my-16">
+
+    
+    <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 lg:px-16 px-8 bg-white lg:mt-24 my-16">
       {services.map((service, index) => (
         <div
           key={index}

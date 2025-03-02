@@ -1,5 +1,3 @@
-import nodemailer from "nodemailer";
-
 export default async function handler(req, res) {
   if (req.method === "POST") {
     const { name, email, message } = req.body;
@@ -23,9 +21,10 @@ export default async function handler(req, res) {
       const mailOptions = {
         from: email,
         to: "niku2003kumari@gmail.com", // Replace with your email
-        subject: `New message from ${name}`,
-        text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
+        subject: `New message from ${name}`, // Corrected with backticks
+        text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`, // Corrected with backticks
       };
+      
 
       // Send the email
       await transporter.sendMail(mailOptions);

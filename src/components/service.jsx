@@ -36,9 +36,9 @@ function CustomService() {
   ];
 
   return (
-    <div className="lg:p-24 p-12">
+    <div className="lg:p-24 p-4">
     <h2 className="text-3xl font-bold text-gray-800 text-center">Customized Development Services</h2>
-        <p className="text-gray-600 m-4 text-center" >
+        <p className="text-gray-600 pb-6 text-center" >
         Specialized in app and software development with years of experience, providing customized solutions.
         </p>
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 ">
@@ -63,9 +63,9 @@ function CustomService() {
         </div>
       ))}
     </div>
-    <div className="mt-4 text-center">
+    <div className="mt-1 text-center">
           <Link href={"/Contact"}>
-            <button className="text-white rounded-full p-5 mt-5 px-10 font-bold border-2 bg-blue-800 hover:bg-blue-900 hover:shadow-2xl ">
+            <button className="text-white rounded-full p-5 mt-5 px-24 font-bold border-2 bg-blue-800 hover:bg-blue-900 hover:shadow-2xl ">
               Contact 
             </button>
           </Link>
